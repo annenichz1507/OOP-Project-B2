@@ -17,4 +17,8 @@ export abstract class Person {
         this.weight = weight;
         
     }
+
+    getId() {
+        return this.id;
+    }
 }
