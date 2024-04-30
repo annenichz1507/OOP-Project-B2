@@ -1,11 +1,4 @@
 import { Person } from "./Person";
-<<<<<<< HEAD
-
-class Pilot extends Person {
-    constructor(id : number, name : string, age : number, gender : string, nationality : string, phoneNumber : number, weight : number) {
-        super (id, name, age, gender, nationality, phoneNumber, weight);
-        
-=======
 export class Pilot extends Person {
     private position: string;
     private salary: number;
@@ -18,6 +11,5 @@ export class Pilot extends Person {
 
     getPosition(): string {
         return this.position;
->>>>>>> passenger
     }
 }
