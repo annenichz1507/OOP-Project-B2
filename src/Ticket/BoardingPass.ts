@@ -4,8 +4,8 @@ import { Seat } from "../Airport/Seat";
 import { Gate } from "../Airport/Gate";
 
 class Boarding_Pass {
-    private passengerName: Passenger[];
-    private seats: Seat[];
+    private passengerName: Passenger[]=[];
+    private seats: Seat[]=[];
     private flightNumber: string;
     private from: string;
     private to: string;
