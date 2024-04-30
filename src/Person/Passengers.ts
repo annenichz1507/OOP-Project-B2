@@ -1,17 +1,17 @@
 import { Person } from "./Person";
 import { Baggage } from "../Item/Baggage";
+import { Gender } from "../../enum/gender";
 
 export class Passenger extends Person {
     private baggage?: Baggage[];
 
-    constructor(id: number, name: string, age: number, gender: boolean, nationality: string,
-        phoneNumber: number, weight: number, baggage: Baggage[]) {
+    constructor(id: number, name: string, age: number, gender: Gender, nationality: string,phoneNumber: number, weight: number, baggage: Baggage[]) {
         super(id, name, age, gender, nationality, phoneNumber, weight);
         this.baggage = baggage;
     }
 
-    getPassengerId():number{
+    getPassengerId(): number {
         return this.getId();
-            
+
     }
 }

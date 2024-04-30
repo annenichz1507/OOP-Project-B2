@@ -1,3 +1,4 @@
+import { Gender } from "../../enum/gender";
 import { Person } from "./Person";
 export class FlightAttendant extends Person {
     private position: string;
