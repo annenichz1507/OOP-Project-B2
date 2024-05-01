@@ -1,4 +1,4 @@
-import { Gender } from "../../enum/gender";
+import { Gender } from "../enum/gender";
 import { Airline } from "../Airport/Airline";
 export class Customer {
     private id : number;

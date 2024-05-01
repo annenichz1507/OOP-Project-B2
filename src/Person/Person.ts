@@ -1,4 +1,4 @@
-import { Gender } from "../../enum/gender";
+import { Gender } from "../enum/gender";
 export abstract class Person {
     private id : number;
     private name : string;
