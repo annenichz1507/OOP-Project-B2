@@ -1,4 +1,5 @@
 import { Person } from "./Person";
+
 export class FlightAttendant extends Person {
     private position: string;
     private salary: number;
