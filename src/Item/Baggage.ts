@@ -1,4 +1,5 @@
 import { Flight } from "../Flight/Flight";
+
 export class Baggage{
     private id : number;
     private weight : number;

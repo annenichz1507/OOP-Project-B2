@@ -1,5 +1,5 @@
-import { MealType } from "../../enum/MealType";
-import { SeatType } from "../../enum/SeatType";
+import { MealType } from "../enum/MealType";
+import { SeatType } from "../enum/SeatType";
 import { Flight } from "../Flight/Flight";
 SeatType
 export class Airline {
