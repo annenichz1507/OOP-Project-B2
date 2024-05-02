@@ -1,12 +1,10 @@
-
+import { GateStatus } from "../enum/gateStatus";
 export class Gate {
-    private numberOfSeat: string;
-    private typeOfAircraft: string;
-    private status: string;
+    private gateNumber: string;
+    private status: GateStatus;
 
-    constructor(numberOfSeat: string, typeOfAircraft: string, status: string) {
-        this.numberOfSeat = numberOfSeat;
-        this.typeOfAircraft = typeOfAircraft;
+    constructor(gateNumber: string, status: GateStatus) {
+        this.gateNumber = gateNumber;
         this.status = status;
     }
 }
