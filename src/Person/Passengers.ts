@@ -2,12 +2,13 @@ import { Person } from "./Person";
 import { Baggage } from "../Item/Baggage";
 import { Gender } from "../enum/gender";
 import {FrequentFlyer} from "../Item/Frequent_Flyer"
+import { Ticket } from "../Ticket/Ticket";
 
 export class Passenger extends Person {
     public baggage?: Baggage[];
     private frequentFlyer?: FrequentFlyer[] = []
 
-    constructor(id: number, name: string, age: number, gender: Gender, nationality: string,phoneNumber: number, weight: number, baggage: Baggage[],  private author?: FrequentFlyer[] ) {
+    constructor(id: number, name: string, age: number, gender: Gender, nationality: string,phoneNumber: number, weight: number, baggage: Baggage[]) {
         super(id, name, age, gender, nationality, phoneNumber, weight);
         this.baggage = baggage;
     }
