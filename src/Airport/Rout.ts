@@ -1,14 +1,13 @@
 import { Flight } from "../Flight/Flight";
 
 export class Rout {
-    private flight: Flight[] = [];
     private status: string;
-    constructor(flight: Flight[], status: string) {
-        this.flight = flight;
+    private flight: Flight[] = [];
+    constructor(status: string) {
         this.status = status;
     }
 
     setFlight(flight: Flight) {
-        
+        this.flight.push(flight);
     }
 }

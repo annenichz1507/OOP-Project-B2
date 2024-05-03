@@ -1,14 +1,10 @@
 import { Flight } from "./Flight";
 
 export class Schedule {
-    private flight: Flight[] = [];
-    private destination: string;
-    private startTime: Date;
-    private endTime: Date;
+    private startTime: string;
+    private endTime: string;
 
-    constructor(flight: Flight[], destination: string, startTime: Date, endTime: Date) {
-        this.flight = flight;
-        this.destination = destination;
+    constructor(startTime: string, endTime: string) {
         this.startTime = startTime;
         this.endTime = endTime;
     }

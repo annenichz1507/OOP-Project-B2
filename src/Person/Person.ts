@@ -22,4 +22,12 @@ export abstract class Person {
     getId() {
         return this.id;
     }
+
+    getName(): string {
+        return this.name;
+    }
+
+    getAge(): number {
+        return this.age;
+    }
 }
