@@ -19,6 +19,9 @@ import { Baggage } from "./src/Item/Baggage";
 import { Schedule } from "./src/Flight/Schedule";
 import { Airplane } from "./src/Airport/Airplane";
 import { Pilot } from "./src/Person/Pilot";
+import { CoPilot } from "./src/Person/CoPilot";
+import { FlightAttendant } from "./src/Person/FlightAttendent";
+import { Chef } from "./src/Person/Chef";
 
 let passenger01 = new Passenger(1, "Kadin", 18, Gender.Male, "USA", 874556565, 46, []);
 let passenger02 = new Passenger(2, "sanok", 33, Gender.Female, "USA", 877676599, 48, []);
@@ -42,10 +45,12 @@ let airPlane03 = new Airplane("E Jet05","TSH 037",)
 let schedule = new Schedule("9:3 AM","5:30 PM")
 
 let pilot01 = new Pilot(1,"rith",35,Gender.Male,"khmer",70685945,65,"pilot",3000)
+let pilot02 = new Pilot(2, "John", 35, Gender.Male, "USA", 1234567890, 75,"Captain", 10000);
+let coPilot01 = new CoPilot(2, "Alice", 30, Gender.Female, "Canada", 9876543210, 60,"First Officer", 8000);
+let flightAttendant01 = new FlightAttendant(3, "Bob", 28, Gender.Male, "UK", 3456789012, 65,"Senior Flight Attendant", 5000);
+let chef01 = new Chef(4, "Emily", 40, Gender.Female, "France", 5678901234, 70,"Head Chef", 6000);
 
 let flight = new Flight(1, "fin air", "cambodai", "china", schedule, airPlane01, pilot01)
-
-
 let theAirPort= new AirPort("Po Chen tunk","Cambodai, Phnome Penh")
 let theAirline = new Airline(1,"I ron",flight,pilot01)
 
@@ -55,7 +60,12 @@ let baggage02 = new Baggage(2,7,flightID,passenger02)
 let baggage04 = new Baggage(3,7,flightID,passenger02)
 let booking = new Booking("B00213", flight, passenger01, baggage01)
 
+theAirline.hireEmployee(pilot02);
+theAirline.hireEmployee(coPilot01);
+theAirline.hireEmployee(flightAttendant01);
+theAirline.hireEmployee(chef01);
 
+console.log("Total salary paid to all employees:", theAirline.getTotalSalary());
 
 passenger01.addFrequentFlyer(frequentFlyer)
 theAirPort.addGate(gate01)
@@ -68,14 +78,11 @@ theAirPort.addPassenger(passenger02)
 theAirPort.addPassenger(passenger03)
 
 passenger02.addFrequentFlyer(frequentFlyer)
-theAirline.addTicket(ticket01,ticket02,ticket03,ticket04)
+theAirline.addTickets(ticket01,ticket02,ticket03,ticket04)
 theAirline.getReturnTicketPassengerCount()
 
 //number of return tickets.
 console.log(theAirline.getReturnTicketPassengerCount());
-
-
-
 
 flight.addTicket(ticket01)
 flight.addTicket(ticket02)
@@ -90,7 +97,6 @@ console.log(TicketManager);
 console.log(flight.getReturnTicketCount());
 console.log(baggage01);
 console.log(flight);
-
 
 
 

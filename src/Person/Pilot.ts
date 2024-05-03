@@ -25,6 +25,10 @@ export class Pilot extends Person {
         return this.position;
     }
 
+    getSalary(): number {
+        return this.salary;
+    }
+
     // // Method to get the count of flights a pilot has to join for a given date
     // public getFlightsToJoinCount(date: string, pilotId: number): number {
     //     let count = 0;

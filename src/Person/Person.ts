@@ -30,4 +30,6 @@ export abstract class Person {
     getAge(): number {
         return this.age;
     }
+
+    
 }
